@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Muuzo Point Of Sales</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'">
+
+    <!--js-->
+    <script src="js/main.js"></script>
+
+   </head>
+   <body>
+    <div class="parent">
+      <div class="left">
+
+      </div>
+
+      <div class="right">
+       
+        <p class="reg-title">Register</p>
+        <div class="Name" >
+            <div class="FirstName">
+              <label for="FirstName">First Name</label>
+              <input type="text" id="FirstName" placeholder="First Name" class="T1"/><br/>
+            </div>
+            <div class="LastName">
+              <label for="LastName">Last Name</label>
+              <input type="text" id="LastName" placeholder="Last Name" class="T2"/>
+          </div>
+        </div>
+        <!-- Flow -->
+        <div>
+          <div class="PhoneNumber">
+            <label for="PhoneNumber">Phone Number</label>
+            <input type="text" id="PhoneNumber" placeholder="Phone Number" class="T3"/><br/>
+          </div>
+        </div>
+        <!-- Flow -->
+        <div>
+          <div class="EmailAddress">
+            <label for="EmailAddress">Email Address (Optional)</label>
+            <input type="text" id="EmailAddress" placeholder="Email Address" class="T4"/><br/>
+          </div>
+        </div>
+        <div>
+          <div class="CreatePassword">
+            <label for="CreatePassword"><span class="alignleft">Create Password</span><span class="alignright">strength</span></label>
+            <div id="textbox">
+           <div style="clear: both;"></div>
+           <input type="text" id="CreatePassword" placeholder="******" placeholder="Show Password" class="T5"/><br/>
+           <div class="passwordStrength" id="strength" >A strong password has 8 or more characters with a mix of letters, numbers & symbols</div>
+           <div  id="password" class="pass">
+           </div>
+          </div>
+        </div>
+        <div class="ConfirmPassword">
+          <label for="ConfirmPassword">Confirm Password </label>
+          <input type="text" id="ConfirmPassword" placeholder="Confirm Password" class="T6"/><br/>
+        </div>
+          <div class="Footer">
+            <p class="terms">
+           <a  href="sign-in.html">  Sign In Instead</a> 
+            </p>
+             <p class="B1">
+             <a class="B2" href="sign-in.html"><button>Next</button></a><br/>
+             </p>
+            </div>
+              </div>
+    <script src="script.js"></script>
+</body>
+</html>
+    
+
+

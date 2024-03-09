@@ -1,0 +1,38 @@
+const express = require('express');
+const  { engine }  =require('express-handlebars');
+const connectDB = require('./db');
+
+const authRoutes = require('./routes/user');
+const userRoutes = require('./routes/user');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
+
+
+// Connect to MongoDB
+connectDB();
+
+// Parse JSON request body
+app.use(express.json());
+
+app.use(express.static('public'));
+
+// Define authentication routes
+app.use('/auth', authRoutes);
+
+// Define user routes
+app.use('/user', userRoutes);
+
+app.get('/', (req, res) => {
+  res.render('home');
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
