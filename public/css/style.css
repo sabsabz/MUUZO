@@ -1,6 +1,4 @@
 /* Importing Google font-Poppins*/ 
-@import url("https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet");
-  
 *{
     margin: 0;
     padding: 0;
@@ -124,8 +122,9 @@ header .navbar{
     }
 }
 
-.about_img{
-    background:url(../2.jpg);
+.about{
+    height: 100vh;
+    background:url(../images/2.jpg);
     background-position:center;
     background-size: cover;
 }
@@ -180,7 +179,7 @@ header .navbar{
 
   .left {
     grid-column: span 4/ span 4;
-    background:url(../Register.jpg);
+    background:url(../images/Register.jpg);
     background-size: cover;
   }
 

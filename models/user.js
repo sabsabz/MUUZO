@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: false
     },
-    last_name:{
+    last_name: {
       type: String,
       required: true,
       unique: false
@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ['cashier', 'admin'],
-      default: 'cachier'
+      default: 'cashier'
     }
   },
   { timestamps: true }

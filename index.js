@@ -1,5 +1,5 @@
 const express = require('express');
-const  { engine }  =require('express-handlebars');
+const { engine } = require('express-handlebars');
 const connectDB = require('./db');
 
 const authRoutes = require('./routes/user');
@@ -30,6 +30,10 @@ app.use('/user', userRoutes);
 
 app.get('/', (req, res) => {
   res.render('home');
+});
+
+app.get('/about', (req, res) => {
+  res.render('about');
 });
 
 // Start the server
