@@ -36,6 +36,10 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+app.get('/register', (req, res) => {
+  res.render('register', { includeScript: true });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);

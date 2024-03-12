@@ -352,6 +352,7 @@ justify-content: space-between;
 
 .B2{
     display: inline-block;
+    cursor: pointer;
 
  }
 
