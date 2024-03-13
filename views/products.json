@@ -1,0 +1,67 @@
+{
+    "products":[
+        {
+            "id":"1",
+            "name":"Product 1",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/chips.jpg"
+        },{
+            "id":"2",
+            "name":"Product 2",
+            "price": 5,
+            "category": "Food",
+            "image": "/images/products/shrimp-Fajitas.jpg"
+        },{
+            "id":"3",
+            "name":"Product 3",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/Chicken-Biryani.jpg" 
+        },{
+            "id":"4",
+            "name":"Product 4",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/Pepperoni-pizza.jpg"
+        },{
+            "id":"5",
+            "name":"Product 5",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/spaghetti.jpeg"
+        },{
+            "id":"6",
+            "name":"Product 6",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/potatoe-wedges.jpg"
+        },{
+            "id":"7",
+            "name":"Product 7",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/Wings.jpeg"
+        },{
+            "id":"8",
+            "name":"Product 8",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/shrimp-Vitumbua.jpeg"
+        },{
+            "id":"9",
+            "name":"Product 9",
+            "price": 20.5,
+            "category": "Food",
+            "image": "/images/products/Ugali-managu-beef.jpg"
+        },{
+            "id":"10",
+            "name":"Product 10",
+            "price": 200,
+            "category": "Food",
+            "image": "/images/products/masala-chips.jpeg"
+        },{
+
+        }
+    ]
+}

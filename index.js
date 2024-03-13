@@ -28,7 +28,7 @@ app.use('/auth', authRoutes);
 // Define user routes
 app.use('/user', userRoutes);
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
   res.render('home');
 });
 
@@ -48,12 +48,24 @@ app.get('/OTP', (req, res) => {
   res.render('OTP', { includeScript: true });
 });
 
+app.get('/select-outlet', (req, res) => {
+  res.render('select-outlet', { includeScript: true });
+});
+
 app.get('/categories', (req, res) => {
   res.render('categories', { includeScript: true });
 });
 
 app.get('/desert', (req, res) => {
   res.render('desert', { includeScript: true });
+});
+
+app.get('/beverage', (req, res) => {
+  res.render('beverage', { includeScript: true });
+});
+
+app.get('/alcohol', (req, res) => {
+  res.render('alcohol', { includeScript: true });
 });
 
 app.get('/checkout', (req, res) => {
