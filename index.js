@@ -28,7 +28,7 @@ app.use('/auth', authRoutes);
 // Define user routes
 app.use('/user', userRoutes);
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.render('home');
 });
 
