@@ -40,6 +40,26 @@ app.get('/register', (req, res) => {
   res.render('register', { includeScript: true });
 });
 
+app.get('/sign-in', (req, res) => {
+  res.render('sign-in', { includeScript: true });
+});
+
+app.get('/OTP', (req, res) => {
+  res.render('OTP', { includeScript: true });
+});
+
+app.get('/categories', (req, res) => {
+  res.render('categories', { includeScript: true });
+});
+
+app.get('/desert', (req, res) => {
+  res.render('desert', { includeScript: true });
+});
+
+app.get('/checkout', (req, res) => {
+  res.render('checkout', { includeScript: true });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
