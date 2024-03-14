@@ -52,8 +52,8 @@ app.get('/select-outlet', (req, res) => {
   res.render('select-outlet', { includeScript: true });
 });
 
-app.get('/categories', (req, res) => {
-  res.render('categories', { includeScript: true });
+app.get('/food', (req, res) => {
+  res.render('food', { includeScript: true });
 });
 
 app.get('/desert', (req, res) => {
@@ -66,6 +66,10 @@ app.get('/beverage', (req, res) => {
 
 app.get('/alcohol', (req, res) => {
   res.render('alcohol', { includeScript: true });
+});
+
+app.get('/sales', (req, res) => {
+  res.render('sales', { includeScript: true });
 });
 
 app.get('/checkout', (req, res) => {
