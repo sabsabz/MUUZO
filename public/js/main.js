@@ -1,6 +1,7 @@
 
 
 
+
 const form = document.getElementById("myForm");
 
 
@@ -58,5 +59,33 @@ form.addEventListener("submit", function(event) {
   }
 
   // If everything is valid, submit the form
-  form.submit();
+  // form.submit();
+  console.log("Form submitted successfully!");
+
+  fetch("/auth/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      first_name: firstName.value,
+      last_name: lastName.value,
+      phone_number: phoneNumber.value,
+      email: emailAddress.value,
+      password: password.value,
+     
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      console.log("User created successfully!");
+      window.location.href = "/sign-in";
+    } else {
+      console.log("Error creating user:", response.status);
+      // Handle the error
+    }
+  }
+  // .catch(error => {
+  //   console.log("Error creating user:", error);
+  )
 });

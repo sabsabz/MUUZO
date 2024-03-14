@@ -4,6 +4,7 @@ const connectDB = require('./db');
 
 const authRoutes = require('./routes/user');
 const userRoutes = require('./routes/user');
+const productRoutes = require('./routes/product');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,6 +29,8 @@ app.use('/auth', authRoutes);
 // Define user routes
 app.use('/user', userRoutes);
 
+app.use('/api/product', productRoutes);
+
 app.get('/', (req, res) => {
   res.render('home');
 });
@@ -39,6 +42,7 @@ app.get('/about', (req, res) => {
 app.get('/register', (req, res) => {
   res.render('register', { includeScript: true });
 });
+
 
 app.get('/sign-in', (req, res) => {
   res.render('sign-in', { includeScript: true });
