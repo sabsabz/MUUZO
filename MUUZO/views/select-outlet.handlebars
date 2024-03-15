@@ -1,0 +1,109 @@
+ <style>
+        input[type='radio'] {
+            display: none;
+        }
+        label {
+            position: relative;
+            display: flex;
+            align-items: start;
+            padding: 1rem;
+            background-color: #42404a;
+            border: none;
+            border-radius: 5px;
+            color: #ccc;
+        }
+        label::before {
+            content: '';
+            height: 15px;
+            width: 15px;
+            display: inline-block;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            margin-right: 0.6rem;
+        }
+        input[type='radio']:checked + label {
+            background-color: #7e6ad2;
+            color: #ffffff;
+        }
+        input[type='radio']:checked + label::before {
+            height: 15px;
+            width: 15px;
+            border: 8px solid #ccc;
+            display: inline-block;
+            border-radius: 50%;
+        }
+    </style>
+<body>
+        <div class="parent">
+            <div class="left">
+                <!--  -->
+            </div>
+
+            <div class="right" style="color: #ffffff">
+                <div style="max-width: 40rem">
+                    <p class="reg-title">
+                        Welcome to<button style="font-size: 1.2rem">
+                            Muuzo
+                        </button>
+                    </p>
+                    <div style="margin: 2rem 0">
+                        <span>Select Location</span>
+                        <p>
+                            You've added the following locations to your
+                            <b>ABC Enterprises.</b> Choose which one this POS
+                            will serve.
+                        </p>
+                    </div>
+                    <p class="heading">2 locations</p>
+
+                    <div style="display: flex; flex-direction: column">
+                        <input type="text"placeholder="Search for a Location"style="
+                                background-color: #42404a;
+                                padding: 0.5rem 0.8rem;
+                                outline: none;
+                                border: none;
+                                border-radius: 5px;
+                                color: #ffffff;
+                                /* margin-bottom: 1rem; */
+                            "
+                        />
+                        <div style="margin: 1rem 0">
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="location"
+                                    id="jacaranda-avenue"
+                                />
+                                <label for="jacaranda-avenue">
+                                    13 Jaracaranda Avenue, 13, Nairobi, Kenya
+                                    <br />
+                                    ABC Restaurant
+                                </label>
+                            </div>
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="location"
+                                    id="babadogo"
+                                />
+                                <label for="babadogo">
+                                    <span>
+                                        Babadogo, Restaurant, Nairobi, Kenya
+                                        <br />
+                                        ABC Restaurant
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex;justify-content: space-between;align-items: center;">
+                                <a class="P1" href="/otp.html"><button>Back</button></a>
+                                <a class="P1" href="/Categories"><button style="background-color: #7e6ad2">Next</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
