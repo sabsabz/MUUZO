@@ -19,7 +19,7 @@ const register = async (req, res, next) => {
         await user.save();
         res.json({ message: 'Registration successful' });
     } catch (error) {
-        next(error);
+        res.json({message: "error creating user"})
     }
 };
 
@@ -29,11 +29,14 @@ const login = async (req, res, next) => {
 
     try {
         const user = await User.findOne({ email });
+   
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
 
         const passwordMatch = await user.comparePassword(password);
+        console.log(passwordMatch);
+      
         if (!passwordMatch) {
             return res.status(401).json({ message: 'Incorrect password' });
         }

@@ -60,7 +60,6 @@ form.addEventListener("submit", function(event) {
 
   // If everything is valid, submit the form
   // form.submit();
-  console.log("Form submitted successfully!");
 
   fetch("/auth/register", {
     method: "POST",

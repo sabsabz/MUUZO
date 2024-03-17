@@ -400,7 +400,7 @@ header .navbar {
     padding: 32px 0px;
 }
 
-.S2 button {
+button{
     padding: 5px 200px;
     background-color: blueviolet;
     color: #fff;
