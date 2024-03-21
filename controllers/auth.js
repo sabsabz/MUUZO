@@ -7,14 +7,13 @@ const register = async (req, res, next) => {
     const { first_name, last_name, email, password, phone_number, role } = req.body;
 
     try {
-        const hashedPassword = await bcrypt.hash(password, 10);
         const user = new User({
             first_name,
             last_name,
             email,
             phone_number,
             role,
-            password: hashedPassword,
+            password,
         });
         await user.save();
         res.json({ message: 'Registration successful' });
@@ -35,7 +34,6 @@ const login = async (req, res, next) => {
         }
 
         const passwordMatch = await user.comparePassword(password);
-        console.log(passwordMatch);
       
         if (!passwordMatch) {
             return res.status(401).json({ message: 'Incorrect password' });
