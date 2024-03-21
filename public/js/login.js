@@ -19,7 +19,7 @@ form.addEventListener("submit", async (e) => {
             if(response.ok){
                 window.location.href = "/OTP"
             } else {
-                alert("Invalid phone number or password")
+                alert("Invalid email or password")
             }
           })
         

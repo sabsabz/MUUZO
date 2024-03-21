@@ -49,7 +49,7 @@ app.get('/sign-in', (req, res) => {
 });
 
 app.get('/OTP', (req, res) => {
-  res.render('OTP', { includeScript: true });
+  res.render('otp', { includeScript: true });
 });
 
 app.get('/select-outlet', (req, res) => {
