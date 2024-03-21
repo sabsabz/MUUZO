@@ -7,7 +7,7 @@ const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 
 app.engine('handlebars', engine());
@@ -29,7 +29,7 @@ app.use('/auth', authRoutes);
 // Define user routes
 app.use('/user', userRoutes);
 
-app.use('/api/product', productRoutes);
+app.use('/api/products', productRoutes);
 
 app.get('/', (req, res) => {
   res.render('home');

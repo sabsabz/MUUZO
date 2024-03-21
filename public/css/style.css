@@ -592,26 +592,29 @@ button{
 }
 .k {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* This will allow items to wrap onto the next line */
+    justify-content: space-between; /* This spreads out the items */
     padding-top: 32px;
+    gap: 20px; /* This adds space between items */
 }
+
 .k1 {
-    width: 185px;
+    width: calc(25% - 20px); /* Adjust width to fit four items per row considering the gap */
     height: 192px;
     padding: 5px;
     background-color: white;
     border: 1px solid white;
     border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
+
 .k1:hover {
-    width: 185px;
-    height: 192px;
-    padding: 5px;
     background-color: blueviolet;
     border: 1px solid white;
-    border-radius: 8px;
     color: white;
 }
+
 .k2 {
     height: 60px;
     width: auto;
