@@ -18,7 +18,7 @@ otpForm.addEventListener("click", async () => {
             body: JSON.stringify({ userId, otp })
         }).then(response => {
             if (response.ok) {
-                window.location.href = "/food";
+                window.location.href = "/Food";
             } else {
                 alert("Invalid or expired OTP");
             }
