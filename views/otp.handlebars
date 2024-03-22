@@ -12,27 +12,25 @@
           Enter Code</br>
           A code wil be sent to Email
         </p>
-      <div class="OTP"></br>
-       <input type="text"  maxlength="1">
-       <input type="text"  maxlength="1">
-       <input type="text"  maxlength="1">
-       <input type="text"  maxlength="1">
-       <input type="text"  maxlength="1">
-       <input type="text"  maxlength="1">
-      </div></br>
+      <div  class="OTP"></br>
+       <input id="otp" type="number" >
+       
+      </div>
+      </br>
         <!-- Flow -->
         <div>
         </div></br>
          <div class="wording">
             <p class="words">
-           <a>Code Expired Resend Code</a>
-           <a class="P1"href="/select-outlet"><button>Next</button></a>
+           <p class="P1">
+            <button id="otpForm">Next</button></p>
             </p> 
+         </div>
       </div>
     </div>
   
   {{#if includeScript}}
-  <script src="/js/main.js" type="text/javascript" ></script>
+  <script src="/js/otpVerify.js" type="text/javascript" ></script>
   {{/if}}
 
 
