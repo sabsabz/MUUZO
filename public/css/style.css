@@ -452,7 +452,7 @@ button{
 }
 
 .OTP input {
-    width: 50px;
+    width: 300px;
     font-size: 32px;
     padding: 10px;
     text-align: center;
@@ -466,6 +466,17 @@ button{
     transition: all 0.1s;
     height: 50px;
     background-color: #666;
+}
+
+.OTP input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+OPT input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .words {

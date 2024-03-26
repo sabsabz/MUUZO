@@ -1,254 +1,4 @@
-<body class="a relative" x-data="{ openEventModal:false, currentPayment:'cash' }">
-                            <!-- Modal -->
-<!-- Backdrop begin -->
-<div class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-  <!--
-    Background backdrop, show/hide based on slide-over state.
-
-    Entering: "ease-in-out duration-500"
-      From: "opacity-0"
-      To: "opacity-100"
-    Leaving: "ease-in-out duration-500"
-      From: "opacity-100"
-      To: "opacity-0"
-  -->
-  <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" x-show="openEventModal"></div>
-
-  <div class="fixed inset-0 overflow-hidden" x-show="openEventModal">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-        <!--
-          Slide-over panel, show/hide based on slide-over state.
-
-          Entering: "transform transition ease-in-out duration-500 sm:duration-700"
-            From: "translate-x-full"
-            To: "translate-x-0"
-          Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
-            From: "translate-x-0"
-            To: "translate-x-full"
-        -->
-        <div class="pointer-events-auto relative w-screen max-w-md">
-          <!--
-            Close button, show/hide based on slide-over state.
-
-            Entering: "ease-in-out duration-500"
-              From: "opacity-0"
-              To: "opacity-100"
-            Leaving: "ease-in-out duration-500"
-              From: "opacity-100"
-              To: "opacity-0"
-          -->
-          
-
-          <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl" x-show="openEventModal" @click.away="openEventModal = false">
-            <div class="px-4 sm:px-6 flex items-center justify-between bg-purple-700 pt-16 pb-3">
-              <h2 class="text-2xl font-semibold leading-6 text-white" id="slide-over-title">Checkout</h2>
-              <div class="">
-                <a role="button" @click="openEventModal = false">
-                  <span class="sr-only">Close panel</span>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15 5L5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M5 5L15 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </a>
-                </div>
-            </div>
-            <div class="relative mt-6 flex-1 px-4 sm:px-6">
-              <!-- Your content -->
-              <div class="flex flex-col w-full mb-10">
-                <div class="flex items-center justify-between w-full py-2 border-b text-gray-400">
-                  <span>Number of Items</span>
-                  <span>5</span>
-                </div>
-                <div class="flex items-center justify-between w-full py-2 border-b">
-                  <span>Subtotal</span>
-                  <span>Kes 1,503</span>
-                </div>
-                <div class="flex items-center justify-between w-full py-2 border-b">
-                  <span>Discounts</span>
-                  <span>Kes 0</span>
-                </div>
-                <div class="flex items-center justify-between w-full py-2 border-b">
-                  <span>Total Tax</span>
-                  <span>Kes 171</span>
-                </div>
-                <div class="flex items-center justify-between w-full pt-2 font-bold text-xl">
-                  <span>Total</span>
-                  <span>Kes 1675</span>
-                </div>
-              </div>
-              {{!-- payment options --}}
-              <div class="flex flex-col" x-data="{paymentMethod:'', paymentMode:false}">
-                <h6 class="mb-5">Select Payment</h6>
-                <div class="flex flex-col space-y-2 pb-5" x-show="paymentMode === false && paymentMethod === ''">
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'cash' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'cash';paymentMode = true}">
-                    <span class="text-white font-semibold">Cash</span>
-                    <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'mpesa' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'mpesa';paymentMode = true}">
-                    <span class="text-white font-semibold">Mpesa</span>
-                    <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'voucher' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'voucher';paymentMode = true}">
-                    <span class="text-white font-semibold">Voucher</span>
-                    <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'credit' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'credit';paymentMode = true}">
-                    <span class="text-white font-semibold">Credit</span>
-                    <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'zawadi' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'zawadi';paymentMode = true}">
-                    <span class="text-white font-semibold">Zawadi</span>
-                    <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </button>
-                </div>
-                {{!-- cash --}}
-                <div class="flex flex-col" x-show="paymentMode && paymentMethod === 'cash'" x-transition >
-                    <div class="flex items-center justify-between mb-4">
-                      <h2>Cash</h2>
-                      <div class="cursor-pointer" @click="()=> {paymentMode = false; paymentMethod = ''}">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 5L5 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5 5L15 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      </div>
-                    </div>
-                    
-                    <span class="uppercase text-[12px]">ENTER Amount</span>
-                    <div class="flex">
-                      <input type="number" class="p-3 ring-1 ring-purple-600 rounded-l-lg outline-none">
-                      <div class="outline-none rounded-r-lg bg-purple-600 text-white px-5 py-[10px] flex items-center justify-center cursor-pointer">Pay</div>
-                    </div>
-                </div>
-                {{!-- Mpesa --}}
-                <div class="flex flex-col" x-show="paymentMode && paymentMethod === 'mpesa'" x-transition >
-                    <div class="flex items-center justify-between mb-4">
-                      <h2>Mpesa</h2>
-                      <div class="cursor-pointer" @click="()=> {paymentMode = false; paymentMethod = ''}">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 5L5 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5 5L15 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      </div>
-                    </div>
-                    
-                    <span class="uppercase text-[12px]">ENTER Amount</span>
-                    <div class="flex">
-                      <input type="number" class="p-3 ring-1 ring-purple-600 rounded-l-lg outline-none">
-                      <div class="outline-none rounded-r-lg bg-purple-600 text-white px-5 py-[10px] flex items-center justify-center cursor-pointer">Pay</div>
-                    </div>
-                </div>
-                <div class="flex flex-col space-y-2" x-show="paymentMode && paymentMethod === 'credit'" x-transition >
-                    <div class="flex items-center justify-between mb-4">
-                      <h2>Credit</h2>
-                      <div class="cursor-pointer" @click="()=> {paymentMode = false; paymentMethod = ''}">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 5L5 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5 5L15 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      </div>
-                    </div>
-                    
-                    <div class="flex flex-col space-y-1 mb-2">
-                      <label for="ref-number" class="text-[#7E7D85]">Enter ref number</label>
-                      <input type="text" id="ref-number" name="ref-number" class="p-3 ring-1 ring-purple-600 rounded-lg outline-none" placeholder="REF:QWERTYUIOP345678">
-                    </div>
-                    <div class="flex flex-col space-y-1 mb-2">
-                      <label for="ref-number" class="text-[#7E7D85]">Enter AMOUNT</label>
-                      <input type="number" id="ref-number" name="ref-number" class="p-3 ring-1 ring-purple-600 rounded-lg outline-none" placeholder="Kes 1675">
-                    </div>
-                    <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none">
-                      <span class="text-white font-semibold">Complete</span>
-                      <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                  </button>
-                </div>
-                <div class="flex flex-col space-y-2" x-show="paymentMode && paymentMethod === 'voucher'" x-transition >
-                    <div class="flex items-center justify-between mb-4">
-                      <h2>Voucher</h2>
-                      <div class="cursor-pointer" @click="()=> {paymentMode = false; paymentMethod = ''}">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 5L5 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5 5L15 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      </div>
-                    </div>
-                    
-                    <div class="flex flex-col space-y-1 mb-2">
-                      <label for="ref-number" class="text-[#7E7D85]">Enter voucher number</label>
-                      <input type="text" id="ref-number" name="ref-number" class="p-3 ring-1 ring-purple-600 rounded-lg outline-none" placeholder="REF:QWERTYUIOP345678">
-                    </div>
-                    <div class="flex flex-col space-y-1 mb-2">
-                      <label for="ref-number" class="text-[#7E7D85]">Enter AMOUNT</label>
-                      <input type="number" id="ref-number" name="ref-number" class="p-3 ring-1 ring-purple-600 rounded-lg outline-none" placeholder="Kes 1675">
-                    </div>
-                    <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none">
-                      <span class="text-white font-semibold">Complete</span>
-                      <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                  </button>
-                </div>
-                <div class="flex flex-col space-y-2" x-show="paymentMode && paymentMethod === 'zawadi'" x-transition >
-                    <div class="flex items-center justify-between mb-4">
-                      <h2>Zawadi</h2>
-                      <div class="cursor-pointer" @click="()=> {paymentMode = false; paymentMethod = ''}">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 5L5 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5 5L15 15" stroke="#A6A6A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      </div>
-                    </div>
-                    
-                    <div class="flex flex-col space-y-1 mb-2">
-                      <label for="phone-number" class="text-[#7E7D85]">ENTER PHONE NUMBER</label>
-                      <input type="text" id="phone-number" name="phone-number" class="p-3 ring-1 ring-purple-600 rounded-lg outline-none" placeholder="Phone Number:0720321321">
-                    </div>
-                    <div class="flex flex-col space-y-1 mb-2">
-                      <label for="ref-number" class="text-[#7E7D85]">Enter AMOUNT</label>
-                      <input type="number" id="ref-number" name="ref-number" class="p-3 ring-1 ring-purple-600 rounded-lg outline-none" placeholder="Kes 1675">
-                    </div>
-                    <div class="flex flex-col space-y-1 mb-2">
-                      <label for="ref-number" class="text-[#7E7D85]">Number of points</label>
-                      <input type="number" id="ref-number" name="ref-number" class="p-3 ring-1 ring-purple-600 rounded-lg outline-none" placeholder="20">
-                    </div>
-                    <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none">
-                      <span class="text-white font-semibold">Complete</span>
-                      <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-                            <!-- /Modal -->
+<body class="a">
   <div class="b">
     <!-- Side bar -->
     <div class="c">
@@ -260,13 +10,19 @@
           <img src="Sell.jpg" alt="" class="f" a href="Categories" class="j1"></a>
         </div>
         <div class="e">
-          <img src="sales.jpg" alt="" class="f">
+            <a href="">
+          <img src="/images/sales.jpg" alt="" class="f">
+            </a>
         </div>  
         <div class="e">
-          <img src="package 1.jpg" alt="" class="f">
+            <a href="">
+          <img src="/images/package 1.jpg" alt="" class="f">
+            </a>
         </div>
         <div class="e">
-          <img src="user.jpg" alt="" class="f">
+            <a href="">
+          <img src="/images/user.jpg" alt="" class="f">
+            </a>
      </div>
   
       </div>
@@ -282,10 +38,14 @@
           <a href="Alcohol" class="j1"><span class="j4">Alcohol</span></a>
           <a href="" class="j2"><img src="Settings.jpg"class="j3"alt=""></a>
       </diV>
-    <div class="k">
-      {{!--  --}}
+      <div  class="k">
+       
+      </div>
+    
+     
     </div>
-    </div>
+
+    {{!-- this is the cart --}}
     <div class="l">
         <div class="m">
             <div class="m1">
@@ -369,7 +129,7 @@
             </div>
             <!-- Checkout button -->
             <div>
-                <button class="r" @click="openEventModal = true" ><span>Checkout</span><span>→</span></button>
+                <button class="r"><span>Checkout</span><span>→</span></button>
             </div>
         </div>
     </div>
@@ -377,7 +137,6 @@
 </body>
 
  {{#if includeScript}}
-  {{!-- <script type="module" src="/js/alpine.js" type="text/javascript" ></script> --}}
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="/js/products.js" type="text/javascript" ></script>
   <script src="/js/products.js" type="text/javascript" ></script>
   {{/if}}

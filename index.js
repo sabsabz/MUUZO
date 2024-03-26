@@ -5,7 +5,7 @@ const connectDB = require('./db');
 const authRoutes = require('./routes/user');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
-
+const otpRouter = require('./routes/otp');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -28,6 +28,7 @@ app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 
 app.use('/api/products', productRoutes);
+app.use("/otp", otpRouter)
 
 app.get('/', (req, res) => {
     res.render('home');
