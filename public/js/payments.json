@@ -1,0 +1,16 @@
+{
+    "payments":[
+        {
+            "id":"1",
+            "name":"Estelle",
+            "Total": 120,
+            "category": "Cash"
+            
+        },{
+            "id":"2",
+            "name":"Adrian",
+            "Total": 620,
+            "category": "Mpesa"
+        }
+    ]
+}

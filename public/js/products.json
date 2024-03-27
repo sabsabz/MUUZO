@@ -2,66 +2,295 @@
     "products":[
         {
             "id":"1",
-            "name":"Product 1",
-            "price": 20.5,
+            "name":"Chips",
+            "price": 120,
             "category": "Food",
             "image": "/images/products/chips.jpg"
         },{
             "id":"2",
-            "name":"Product 2",
-            "price": 5,
+            "name":"Shrimp Fajitas",
+            "price": 1500,
             "category": "Food",
             "image": "/images/products/shrimp-Fajitas.jpg"
         },{
             "id":"3",
-            "name":"Product 3",
-            "price": 20.5,
+            "name":"Chicken Biryani",
+            "price": 450,
             "category": "Food",
             "image": "/images/products/Chicken-Biryani.jpg" 
         },{
             "id":"4",
-            "name":"Product 4",
-            "price": 20.5,
+            "name":"Pepperoni Pizza",
+            "price": 500,
             "category": "Food",
             "image": "/images/products/Pepperoni-pizza.jpg"
         },{
             "id":"5",
-            "name":"Product 5",
-            "price": 20.5,
+            "name":"Spaghetti",
+            "price": 150,
             "category": "Food",
             "image": "/images/products/spaghetti.jpeg"
         },{
             "id":"6",
-            "name":"Product 6",
-            "price": 20.5,
+            "name":"Potatoe Wedges",
+            "price": 200,
             "category": "Food",
             "image": "/images/products/potatoe-wedges.jpg"
         },{
             "id":"7",
-            "name":"Product 7",
-            "price": 20.5,
+            "name":"Wings",
+            "price": 350,
             "category": "Food",
             "image": "/images/products/Wings.jpeg"
         },{
             "id":"8",
-            "name":"Product 8",
-            "price": 20.5,
+            "name":"Vitumbua",
+            "price": 50,
             "category": "Food",
-            "image": "/images/products/shrimp-Vitumbua.jpeg"
+            "image": "/images/products/Vitumbua.jpeg"
         },{
             "id":"9",
-            "name":"Product 9",
-            "price": 20.5,
+            "name":"Ugali Managu Beef",
+            "price": 250,
             "category": "Food",
             "image": "/images/products/Ugali-managu-beef.jpg"
         },{
             "id":"10",
-            "name":"Product 10",
+            "name":"Masala Chips",
             "price": 200,
             "category": "Food",
             "image": "/images/products/masala-chips.jpeg"
         },{
+            "id":"11",
+            "name":"lasagna",
+            "price": 500,
+            "category": "Food",
+            "image": "/images/products/lasagna.jpg"
 
+        },{
+            "id":"12",
+            "name":"Double Burger",
+            "price": 450,
+            "category": "Food",
+            "image": "/images/products/double burger.jpg"
+ 
+        },{
+            "id":"1",
+            "name":"Ice Cream",
+            "price": 150,
+            "category": "Desert",
+            "image": "/images/products/ice cream.jpeg"
+
+        },{
+            "id":"2",
+            "name":"Macarons",
+            "price": 50,
+            "category": "Desert",
+            "image": "/images/products/macarons.jpeg"
+        },{
+            "id":"3",
+            "name":"Madeleine",
+            "price": 100,
+            "category": "Desert",
+            "image": "/images/products/madeleine.jpg"
+        },{
+            "id":"4",
+            "name":"Mango Dumplings",
+            "price": 200,
+            "category": "Desert",
+            "image": "/images/products/mango dumplings.jpeg"
+        },{
+            "id":"5",
+            "name":"Mango Mouuse Cake",
+            "price": 250,
+            "category": "Desert",
+            "image": "/images/products/mango mouuse cake.jpeg"
+        },{
+            "id":"6",
+            "name":"French Silk Pie",
+            "price": 250,
+            "category": "Desert",
+            "image": "/images/products/French-silk-pie.jpeg"
+        },{
+            "id":"7",
+            "name":"French Financier",
+            "price": 280,
+            "category": "Desert",
+            "image": "/images/products/French-Financier.jpeg"
+        },{
+            "id":"8",
+            "name":"Crepe",
+            "price": 110,
+            "category": "Desert",
+            "image": "/images/products/crepe.jpeg"
+        },{
+            "id":"9",
+            "name":"Carrot Cake",
+            "price": 120,
+            "category": "Desert",
+            "image": "/images/products/carrot-cake.jpg"
+        },{
+            "id":"10",
+            "name":"Canele",
+            "price": 50,
+            "category": "Desert",
+            "image": "/images/products/canele.jpg"
+        },{
+            "id":"11",
+            "name":"Caramel Apple Cheesecake Bars",
+            "price": 200,
+            "category": "Desert",
+            "image": "/images/products/caramel-apple-cheesecake-bars.jpg"
+        },{
+            "id":"12",
+            "name":"Apple Tart",
+            "price": 200,
+            "category": "Desert",
+            "image": "/images/products/apple-tart.jpeg"
+        },{
+            "id":"1",
+            "name":"Tea",
+            "price": 100,
+            "category": "Beverage",
+            "image":"/images/products/Tea.jpeg" 
+        },{
+            "id":"2",
+            "name":"Coffee",
+            "price": 150,
+            "category": "Beverage",
+            "image": "/images/products/coffee.jpeg" 
+        },{
+            "id":"3",
+            "name":"Hot Chocolate",
+            "price": 200,
+            "category": "Beverage",
+            "image": "/images/products/Hot Chocolate.jpeg"
+        },{
+            "id":"4",
+            "name":"Fresh Juice",
+            "price": 250,
+            "category": "Beverage",
+            "image": "/images/products/fresh juice.jpeg"
+        },{
+            "id":"5",
+            "name":"Water",
+            "price": 100,
+            "category": "Beverage",
+            "image": "/images/products/Water.jpeg"
+        },{
+            "id":"6",
+            "name":"Milkshake",
+            "price": 250,
+            "category": "Beverage",
+            "image": "/images/products/milkshake.jpeg"
+        },{
+            "id":"7",
+            "name":"Smoothie",
+            "price": 400,
+            "category": "Beverage",
+            "image": "/images/products/smoothie.jpeg"
+        },{
+            "id":"8",
+            "name":"Redbull Energy Drink",
+            "price": 445,
+            "category": "Beverage",
+            "image": "/images/products/redbull energy drink.jpeg"
+        },{
+            "id":"9",
+            "name":"Soda",
+            "price": 120,
+            "category": "Beverage",
+            "image": "/images/products/Soda.jpeg"
+        },{
+            "id":"10",
+            "name":"Boba",
+            "price": 150,
+            "category": "Beverage",
+            "image": "/images/products/boba.jpeg"
+        },{
+            "id":"11",
+            "name":"Ice Tea",
+            "price": 250,
+            "category": "Beverage",
+            "image": "/images/products/ice tea.jpeg"
+        },{
+            "id":"12",
+            "name":"Delmonte Juice",
+            "price": 300,
+            "category": "Beverage",
+            "image": "/images/products/delmonte juice.jpeg"
+        },{
+            "id":"1",
+            "name":"Martel",
+            "price": 12000,
+            "category": "Alcohol",
+            "image": "/images/products/Martel.jpeg"  
+        },{
+            "id":"2",
+            "name":"Gilbey's",
+            "price": 7500,
+            "category": "Alcohol",
+            "image": "/images/products/gilbey's.jpeg"
+        },{
+            "id":"3",
+            "name":"Bacardi",
+            "price": 20000,
+            "category": "Alcohol",
+            "image": "/images/products/bacardi.jpeg"
+        },{
+            "id":"4",
+            "name":"Bailey's",
+            "price": 15000,
+            "category": "Alcohol",
+            "image": "/images/products/bailey's.jpeg"
+        },{
+            "id":"5",
+            "name":"Bombay Sapphire",
+            "price": 25000,
+            "category": "Alcohol",
+            "image": "/images/products/bombay sapphire.jpeg"
+        },{
+            "id":"6",
+            "name":"Four Roses",
+            "price": 25000,
+            "category": "Alcohol",
+            "image": "/images/products/four roses.jpeg"
+        },{
+            "id":"7",
+            "name":"Glenfiddich",
+            "price": 30000,
+            "category": "Alcohol",
+            "image": "/images/products/Glenfiddich.jpeg"
+        },{
+            "id":"8",
+            "name":"Kingfisher",
+            "price": 1500,
+            "category": "Alcohol",
+            "image": "/images/products/Kingfisher.jpeg"
+        },{
+            "id":"9",
+            "name":"Jack Daniel",
+            "price": 35000,
+            "category": "Alcohol",
+            "image": "/images/products/Jack Daniel.jpeg"
+        },{
+            "id":"10",
+            "name":"Tangueray",
+            "price": 20000,
+            "category": "Alcohol",
+            "image": "/images/products/Tangueray.jpeg"
+        },{
+            "id":"12",
+            "name":"Ballentines",
+            "price": 45000,
+            "category": "Alcohol",
+            "image": "/images/products/ballentines.jpeg"
+        },{
+            "id":"12",
+            "name":"Captain Morgan",
+            "price": 15000,
+            "category": "Alcohol",
+            "image": "/images/products/captain morgan.jpeg"
         }
     ]
 }

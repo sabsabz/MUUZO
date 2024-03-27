@@ -5,9 +5,9 @@ const connectDB = require('./db');
 const authRoutes = require('./routes/user');
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
-
+const otpRouter = require('./routes/otp');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 
 app.engine('handlebars', engine());
@@ -29,7 +29,8 @@ app.use('/auth', authRoutes);
 // Define user routes
 app.use('/user', userRoutes);
 
-app.use('/api/product', productRoutes);
+app.use('/api/products', productRoutes);
+app.use("/otp", otpRouter)
 
 app.get('/', (req, res) => {
   res.render('home');
@@ -49,7 +50,7 @@ app.get('/sign-in', (req, res) => {
 });
 
 app.get('/OTP', (req, res) => {
-  res.render('OTP', { includeScript: true });
+  res.render('otp', { includeScript: true });
 });
 
 app.get('/select-outlet', (req, res) => {
@@ -72,12 +73,44 @@ app.get('/alcohol', (req, res) => {
   res.render('alcohol', { includeScript: true });
 });
 
+app.get('/customer', (req, res) => {
+  res.render('customer', { includeScript: true });
+});
+
 app.get('/sales', (req, res) => {
   res.render('sales', { includeScript: true });
 });
 
+app.get('/users', (req, res) => {
+  res.render('users', { includeScript: true });
+});
+
 app.get('/checkout', (req, res) => {
   res.render('checkout', { includeScript: true });
+});
+
+app.get('/cash', (req, res) => {
+  res.render('cash', { includeScript: true });
+});
+
+app.get('/Mpesa', (req, res) => {
+  res.render('Mpesa', { includeScript: true });
+});
+
+app.get('/Voucher', (req, res) => {
+  res.render('Voucher', { includeScript: true });
+});
+
+app.get('/Card', (req, res) => {
+  res.render('Card', { includeScript: true });
+});
+
+app.get('/Zawadi Points', (req, res) => {
+  res.render('Zawadi Points', { includeScript: true });
+});
+
+app.get('/Add Product', (req, res) => {
+  res.render('Add Product', { includeScript: true });
 });
 
 // Start the server

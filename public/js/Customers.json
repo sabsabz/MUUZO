@@ -1,0 +1,14 @@
+{
+    "Customer":[
+        {
+            "id":"1",
+            "name":"Estelle",
+            "Phone number": "0713245464"
+            
+        },{
+            "id":"2",
+            "name":"Adrian",
+            "Phone number": "0712324356"
+        }
+    ]
+}
