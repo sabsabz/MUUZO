@@ -28,7 +28,7 @@ app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 
 app.use('/api/products', productRoutes);
-app.use("/otp", otpRouter)
+app.use('/otp', otpRouter);
 
 app.get('/', (req, res) => {
     res.render('home');
@@ -80,6 +80,10 @@ app.get('/checkout', (req, res) => {
 
 app.get('/customers', (req, res) => {
     res.render('customers', { includeScript: true });
+});
+
+app.get('/users', (req, res) => {
+    res.render('users', { includeScript: true });
 });
 
 // Start the server
