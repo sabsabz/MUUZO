@@ -544,7 +544,7 @@ OPT input[type="number"] {
 }
 .e {
     text-align: center;
-    padding-bottom: 8px;
+    padding-bottom: 8px;`
 }
 .f {
     height: 28px;
@@ -644,7 +644,7 @@ OPT input[type="number"] {
 }
 
 .l {
-    grid-column: span 4 / span 4;
+
     margin-left: 32px;
     background-color: white;
     margin-bottom: 44px;
@@ -812,3 +812,9 @@ OPT input[type="number"] {
     border-radius: 10px;
     margin-bottom: 1rem;
 }
+.customer-background{
+color: blueviolet;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

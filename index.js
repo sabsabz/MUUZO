@@ -70,8 +70,16 @@ app.get('/alcohol', (req, res) => {
     res.render('alcohol', { includeScript: true });
 });
 
+app.get('/customer', (req, res) => {
+    res.render('customer', { includeScript: true });
+});
+
 app.get('/sales', (req, res) => {
     res.render('sales', { includeScript: true });
+});
+
+app.get('/users', (req, res) => {
+    res.render('users', { includeScript: true });
 });
 
 app.get('/checkout', (req, res) => {
@@ -84,6 +92,30 @@ app.get('/customers', (req, res) => {
 
 app.get('/users', (req, res) => {
     res.render('users', { includeScript: true });
+});
+
+app.get('/cash', (req, res) => {
+    res.render('cash', { includeScript: true });
+});
+
+app.get('/Mpesa', (req, res) => {
+    res.render('Mpesa', { includeScript: true });
+});
+
+app.get('/Voucher', (req, res) => {
+    res.render('Voucher', { includeScript: true });
+});
+
+app.get('/Card', (req, res) => {
+    res.render('Card', { includeScript: true });
+});
+
+app.get('/Zawadi Points', (req, res) => {
+    res.render('Zawadi Points', { includeScript: true });
+});
+
+app.get('/Add Product', (req, res) => {
+    res.render('Add Product', { includeScript: true });
 });
 
 // Start the server
