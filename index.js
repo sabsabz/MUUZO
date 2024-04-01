@@ -118,6 +118,14 @@ app.get('/add-product', (req, res) => {
     res.render('add-product', { includeScript: true });
 });
 
+app.get('/inventory', (req, res) => {
+    res.render('inventory', { includeScript: true });
+});
+
+app.get('/gallery', (req, res) => {
+    res.render('gallery', { includeScript: true });
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
