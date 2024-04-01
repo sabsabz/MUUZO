@@ -46,7 +46,7 @@ app.get('/sign-in', (req, res) => {
     res.render('sign-in', { includeScript: true });
 });
 
-app.get('/OTP', (req, res) => {
+app.get('/otp', (req, res) => {
     res.render('otp', { includeScript: true });
 });
 
@@ -98,24 +98,24 @@ app.get('/cash', (req, res) => {
     res.render('cash', { includeScript: true });
 });
 
-app.get('/Mpesa', (req, res) => {
-    res.render('Mpesa', { includeScript: true });
+app.get('/mpesa', (req, res) => {
+    res.render('mpesa', { includeScript: true });
 });
 
-app.get('/Voucher', (req, res) => {
-    res.render('Voucher', { includeScript: true });
+app.get('/voucher', (req, res) => {
+    res.render('voucher', { includeScript: true });
 });
 
-app.get('/Card', (req, res) => {
-    res.render('Card', { includeScript: true });
+app.get('/card', (req, res) => {
+    res.render('card', { includeScript: true });
 });
 
-app.get('/Zawadi Points', (req, res) => {
-    res.render('Zawadi Points', { includeScript: true });
+app.get('/zawadi-points', (req, res) => {
+    res.render('zawadi-points', { includeScript: true });
 });
 
-app.get('/Add Product', (req, res) => {
-    res.render('Add Product', { includeScript: true });
+app.get('/add-product', (req, res) => {
+    res.render('add-product', { includeScript: true });
 });
 
 // Start the server

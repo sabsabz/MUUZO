@@ -147,7 +147,7 @@
             <div class="px-4 sm:px-6 flex items-center justify-between bg-purple-700 pt-16 pb-3">
               <!-- chart header -->
               <div class="m">
-                  <div class="m1">
+                  <div class="m1 flex items-center space-x-3">
                       <p class="m2">Carts</p>
                       <button class="m3"> <img src="/images/Customer.jpg" alt="" class="m4"><span class="m5"> Add customers</span></button>
                   </div> 
@@ -265,44 +265,44 @@
                 </div>
               </div>
               {{!-- payment options --}}
-              <div class="flex flex-col" x-data="{paymentMethod:'', paymentMode:false}">
+              <div class="flex flex-col">
                 <h6 class="mb-5">Select Payment</h6>
-                <div class="flex flex-col space-y-2 pb-5" x-show="paymentMode === false && paymentMethod === ''">
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'cash' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'cash';paymentMode = true}">
-                    <span class="text-white font-semibold"><a href="cash">Cash</a></span>
+                <div class="flex flex-col space-y-2 pb-5">
+                  <a class="flex items-center justify-between rounded-full py-2 px-4 outline-none bg-purple-700" href="/cash" >
+                    <span class="text-white font-semibold">Cash</span>
                     <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'mpesa' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'mpesa';paymentMode = true}">
-                    <span class="text-white font-semibold"><a href="Mpesa">Mpesa</a></span>
+                  </a>
+                  <a class="flex items-center justify-between rounded-full py-2 px-4 outline-none bg-purple-700" href="/mpesa" >
+                    <span class="text-white font-semibold">Mpesa</span>
                     <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'voucher' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'voucher';paymentMode = true}">
-                    <span class="text-white font-semibold"><a href="Voucher">Voucher</a></span>
+                  </a>
+                  <a class="flex items-center justify-between rounded-full py-2 px-4 outline-none bg-purple-700" href="/voucher" >
+                    <span class="text-white font-semibold">Voucher</span>
                     <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'credit' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'credit';paymentMode = true}">
-                    <span class="text-white font-semibold"><a href="Card">Card</a></span>
+                  </a>
+                  <a class="flex items-center justify-between rounded-full py-2 px-4 outline-none bg-purple-700" href="/card" >
+                    <span class="text-white font-semibold">Card</span>
                     <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                  </button>
-                  <button class="flex items-center justify-between rounded-full py-2 px-4 outline-none" x-bind:class="paymentMethod === 'zawadi' ? 'bg-purple-700': 'border border-black text-black'" @click="()=> {paymentMethod = 'zawadi';paymentMode = true}">
-                    <span class="text-white font-semibold"><a href="Zawadi Points">Zawadi Points</a></span>
+                  </a>
+                  <a class="flex items-center justify-between rounded-full py-2 px-4 outline-none bg-purple-700 space-x-2"  href="/zawadi-points" >
+                    <span class="text-white font-semibold">Zawadi-points</span>
                     <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 8.5L24 8.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M17 1.5L24 8.5L17 15.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                  </button>
+                  </a>
                 </div>
                 </div>
               </div>
