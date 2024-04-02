@@ -36,65 +36,85 @@
                     placeholder=" search product by name or barcode number"
                     class="h"
                 />
-                <div>
-                    <div
-                        style="
-                            display: grid;
-                            grid-template-columns: repeat(4, 1fr);
-                            gap: 5px;
-                            margin-top: 1rem;
-                        "
-                    >
-                        <div class="grid-item">Total sales today</div>
-                        <div class="grid-item">Subtotal</div>
-                        <div class="grid-item">Discount</div>
-                        <div class="grid-item">Voucher code</div>
-                    </div>
-                    <div
-                        style="
-                            margin-top: 4rem;
-                            display: flex;
-                            flex-direction: column;
-                        "
-                    >
-                        <div class="flex-item">
-                            <span>Order #5622</span>
-                            <span>Chicken 6pcs</span>
-                        </div>
-                        <div class="flex-item">
-                            <span>Order #5622</span>
-                            <span>Chicken 6pcs</span>
-                        </div>
-                        <div class="flex-item">
-                            <span>Order #5622</span>
-                            <span>Chicken 6pcs</span>
-                        </div>
-                        <div class="flex-item">
-                            <span>Order #5622</span>
-                            <span>Chicken 6pcs</span>
-                        </div>
-                        <div class="flex-item">
-                            <span>Order #5622</span>
-                            <span>Chicken 6pcs</span>
-                        </div>
-                        <div class="flex-item">
-                            <span>Order #5622</span>
-                            <span>Chicken 6pcs</span>
-                        </div>
-                    </div>
-                </div>
+                <table class="min-w-full divide-y divide-gray-300 mt-5">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Order number</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Item</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Quantiy</th>
+              <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                <span class="sr-only">Edit</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">Order #5622</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Chicken nuggets</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4pcs</td>
+              <td class="relative py-4 pl-3 pr-4 sm:pr-0 flex items-center space-x-4">
+                <a href="#" class="text-purple-600 hover:text-purple-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"/><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224"/></svg>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">Order #5622</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Chicken nuggets</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4pcs</td>
+              <td class="relative py-4 pl-3 pr-4 sm:pr-0 flex items-center space-x-4">
+                <a href="#" class="text-purple-600 hover:text-purple-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"/><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224"/></svg>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">Order #5622</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Chicken nuggets</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4pcs</td>
+              <td class="relative py-4 pl-3 pr-4 sm:pr-0 flex items-center space-x-4">
+                <a href="#" class="text-purple-600 hover:text-purple-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"/><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224"/></svg>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">Order #5622</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Chicken nuggets</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4pcs</td>
+              <td class="relative py-4 pl-3 pr-4 sm:pr-0 flex items-center space-x-4">
+                <a href="#" class="text-purple-600 hover:text-purple-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"/><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224"/></svg>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">Order #5622</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Chicken nuggets</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4pcs</td>
+              <td class="relative py-4 pl-3 pr-4 sm:pr-0 flex items-center space-x-4">
+                <a href="#" class="text-purple-600 hover:text-purple-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"/><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 112h352"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M192 112V72h0a23.93 23.93 0 0 1 24-24h80a23.93 23.93 0 0 1 24 24h0v40m-64 64v224m-72-224l8 224m136-224l-8 224"/></svg>
+                </a>
+              </td>
+            </tr>
+           
+
+            <!-- More people... -->
+          </tbody>
+        </table>
             </div>
-            <div class="l">
+            <div class="l col-span-4">
                 <div class="m">
                     <div class="m1">
                         <p class="m2">Carts</p>
-                        <button class="m3">
+                        <a class="m3" href="/customer">
                             <img src="/images/Customer.jpg" alt="" class="m4" /><span
                                 class="m5"
                             >
                                 Add customers</span
                             >
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="n">
