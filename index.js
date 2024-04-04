@@ -55,19 +55,19 @@ app.get('/select-outlet', (req, res) => {
 });
 
 app.get('/food', (req, res) => {
-    res.render('food', { includeScript: true });
+    res.render('food', { includeScript: true ,layout: "food"});
 });
 
 app.get('/desert', (req, res) => {
-    res.render('desert', { includeScript: true });
+    res.render('desert', { includeScript: true,  layout: "food" });
 });
 
 app.get('/beverage', (req, res) => {
-    res.render('beverage', { includeScript: true });
+    res.render('beverage', { includeScript: true,  layout: "food" });
 });
 
 app.get('/alcohol', (req, res) => {
-    res.render('alcohol', { includeScript: true });
+    res.render('alcohol', { includeScript: true , layout: "food" });
 });
 
 app.get('/customer', (req, res) => {
