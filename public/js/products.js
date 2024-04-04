@@ -100,8 +100,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
           addToCart(productId, productName, productPrice); // Add product to cart
       });
   });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 73e9a241dc004a1e6bea770f4ebf4c31357f271a
